@@ -10,14 +10,14 @@ def convert():
         video=me.VideoFileClip(filename)
         audio=video.audio
         file=asksaveasfilename(filetypes=filetypes)
-        audio.write_audiofile( f'{file}{format.get()}')
-        label5=Label(root,text="Done",font=("Arial",20,"bold"),fg="green",bg="#232323")
+        audio.write_audiofile(f'{file}{format.get()}')
+        label5=Label(root,text="Finished",font=("Arial",15,"bold"),fg="green",bg="#232323")
         label5.pack()
         label5.place(x=450,y=300)
 def select():
     global filename
     filetypes = (
-        ('video files', '*.WEBM , *.MPEG , *.MPE , *.MPV , *.MP4 , *.M4P , *.M4V , *.AVI , *.WMV , *.MOV , *.FLV , *.AVCHD'),
+        ('video files', '*.WEBM , *.MPEG , *.MPE , *.MKV , *.MP4 , *.M4P , *.M4V , *.AVI , *.WMV , *.MOV , *.FLV , *.AVCHD'),
         ('All files', '*.*')
     )
     filename=askopenfilename(filetypes=filetypes)
@@ -40,7 +40,7 @@ root.geometry("600x350")
 root.minsize(600,350)
 root.config(bg="#232323")
 root.title("Video to Audio ")
-#  0AK80
+# 0AK80
 label1=Label(root,text="Video to Audio",font=("Arial",32,"bold"),bg="#232323",fg="white")
 label1.pack()
 label2=Label(root,text="Select Video to Convert",font=("Arial",18),bg="#232323",fg="white")
@@ -53,4 +53,6 @@ label3=Label(root,font=("Arial",18,"bold"))
 label3.pack()
 label3.place(x=225,y=150)
 format=StringVar()
+
+
 root.mainloop()
