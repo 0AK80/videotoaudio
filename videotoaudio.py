@@ -6,6 +6,7 @@ filename=''
 
 def convert():
         global filename
+# Formatos para hacer el audio
         filetypes=(("Audio files","*.mp3 , *.waw , *.ogg"),("All files","*.*"))
         video=me.VideoFileClip(filename)
         audio=video.audio
@@ -16,6 +17,7 @@ def convert():
         label5.place(x=450,y=300)
 def select():
     global filename
+#  Formatos de video aceptados
     filetypes = (
         ('video files', '*.WEBM , *.MPEG , *.MPE , *.MKV , *.MP4 , *.M4P , *.M4V , *.AVI , *.WMV , *.MOV , *.FLV , *.AVCHD'),
         ('All files', '*.*')
@@ -34,7 +36,7 @@ def select():
     button3=Button(root,text="Export",font=("Arial",12,"bold"),bg="#232323",fg="white",command=convert,width=10,height=1)
     button3.pack()
     button3.place(x=250,y=300)
-
+#  Tamaño de la ventana y color de fondo(bg)
 root=Tk()
 root.geometry("600x350")
 root.minsize(600,350)
